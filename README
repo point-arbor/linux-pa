@@ -1,18 +1,18 @@
-Linux kernel
-============
+## Instructions
 
-There are several guides for kernel developers and users. These guides can
-be rendered in a number of formats, like HTML and PDF. Please read
-Documentation/admin-guide/README.rst first.
+The kernel does not depend on any new third-party libraries or tools, however, the install script does expect that you have `ccache` installed. It is highly recommended to install this, but the script will probably run anyway.
 
-In order to build the documentation, use ``make htmldocs`` or
-``make pdfdocs``.  The formatted documentation can also be read online at:
+You may also want to do something like `ccache -M 2G`.
 
-    https://www.kernel.org/doc/html/latest/
+#### If you're on Arch with Grub and Dracut, simply run:
 
-There are various text files in the Documentation/ subdirectory,
-several of them using the reStructuredText markup notation.
+```
+chmod +x install.sh
+./install.sh
+```
 
-Please read the Documentation/process/changes.rst file, as it contains the
-requirements for building and running the kernel, and information about
-the problems which may result by upgrading your kernel.
+This will automatically clean mrproper, import your current config, build the kernel, install modules, build an initramfs, and install the kernel with minimal prompting for the user.
+
+#### Otherwise
+
+You may need to modify the install script according to your distro, tutorials are easy to come by so this shouldn't be too much of a hassle.
