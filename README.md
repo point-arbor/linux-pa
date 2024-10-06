@@ -8,11 +8,11 @@ You may also want to do something like `ccache -M 2G`.
 
 ```
 chmod +x install.sh
-./install.sh
+sudo ./install.sh
 ```
 
 This will automatically clean mrproper, import your current config, build the kernel, install modules, build an initramfs, and install the kernel with minimal prompting for the user.
 
-#### Otherwise
+#### Otherwise:
 
 You may need to modify the install script according to your distro, tutorials are easy to come by so this shouldn't be too much of a hassle.
